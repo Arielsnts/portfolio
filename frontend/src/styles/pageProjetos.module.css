@@ -38,6 +38,10 @@
 }
 
 @media (max-width: 600px) {
+    .sect {
+        padding: 100px 5px;
+    }
+
     .projeto {
         width: 90%;
         max-width: none;
