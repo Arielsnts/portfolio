@@ -12,6 +12,12 @@ router.post("/api/contato", async (req: Request, res: Response) => {
       mensagem: string
     }
 
+    if (!nome || !email || !mensagem) {
+      return res.status(400).json({
+        msg: "Todos os campos são obrigatórios: nome, email, mensagem",
+      })
+    }
+
     const novaMsg = await prisma.contato.create({
       data: { nome, email, mensagem },
     })
