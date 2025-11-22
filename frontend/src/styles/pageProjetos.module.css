@@ -21,10 +21,11 @@
     gap: 30px;
 
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
 }
 
 .projeto {
+    width: clamp(250px, 28vw, 300px);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -38,7 +39,8 @@
 
 @media (max-width: 600px) {
     .projeto {
-        width: 300px;
+        width: 90%;
+        max-width: 350px;
     }
 }
 
@@ -77,6 +79,7 @@
     background-color: var(--principal);
 }
 
+/* Loading */
 .loading {
     display: flex;
     flex-direction: column;
