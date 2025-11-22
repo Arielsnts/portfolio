@@ -1,0 +1,246 @@
+.bgWrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.block {
+    position: absolute;
+    width: 500px;
+    height: 1200px;
+}
+
+.block1 {
+    background: var(--light);
+    top: -700px;
+    left: 0px;
+    transform: rotate(60deg);
+    z-index: 1;
+}
+
+.block2 {
+    background: var(--dark);
+    bottom: -700px;
+    right: 0px;
+    transform: rotate(60deg);
+    z-index: 1;
+}
+
+.contato {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg1);
+    color: var(--text1);
+    box-sizing: border-box;
+    overflow: hidden;
+    scroll-margin-top: clamp(60px, 8vh, 70px);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(25px, 3.5vw, 35px);
+
+    width: clamp(220px, 77vw, 570px);
+
+    background-color: var(--bg2);
+    color: white;
+    border-radius: clamp(15px, 3vw, 20px);
+    padding: clamp(15px, 3vw, 30px);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+}
+
+.form h2, .redes h2 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: clamp(8px, 1.5vh, 12px);
+}
+
+.form input {
+    padding: clamp(6px, 1.2vh, 8px) clamp(8px, 1.5vw, 10px);
+    background: var(--bg1);
+    color: var(--text1);
+    border: none;
+    border-radius: clamp(6px, 1vw, 8px);
+    outline: none;
+    width: 90%;
+    border: 1px solid var(--principal);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.form input:focus {
+    box-shadow: 0 0 5px #ffffff9f;
+}
+
+.msg {
+    height: clamp(4rem, 8vh, 6rem);
+    padding: clamp(6px, 1.2vh, 8px) clamp(8px, 1.5vw, 10px);
+
+    background: var(--bg1);
+    color: var(--text1);
+
+    border: 1px solid var(--principal);
+    border-radius: clamp(6px, 1vw, 8px);
+
+    resize: none;
+    overflow-y: auto;
+    width: 90%;
+
+    white-space: pre-wrap;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.msg:focus {
+    outline: none;
+    border: 1px solid var(--principal);
+    box-shadow: 0 0 5px #ffffff9f;
+}
+
+.form button {
+    margin-top: clamp(10px, 2vh, 15px);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: bold;
+
+    background-color: var(--bg1);
+    color: var(--text1);
+
+    width: 100%;
+    height: clamp(30px, 5vh, 35px);
+
+    border: none;
+    border-radius: clamp(30px, 6vw, 40px);
+
+    transition: all 0.2s ease;
+}
+
+.form button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.555);
+    cursor: pointer;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 3vh, 20px);
+    align-items: flex-start; 
+    width: 55%; 
+    font-weight: bold;
+}
+
+.redesLista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.redeItem {
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(4px, 1vw, 6px);
+    width: 100%;
+
+    transition: transform 0.2s ease;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    
+    min-width: 0; 
+}
+
+.redeItem:hover {
+    transform: translateY(-5px);
+    color: var(--light);
+    cursor: pointer;
+}
+
+.fundoRede {
+    background-color: var(--light);
+    height: clamp(50px, 8vw, 70px);
+    width: clamp(50px, 8vw, 70px);
+    min-width: clamp(50px, 8vw, 70px);
+    margin-right: clamp(6px, 1.5vw, 10px);
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0; 
+}
+
+.redeItem:hover .fundoRede {
+    background-color: var(--light);
+    box-shadow: 0 0 5px white;
+}
+
+.fundoRede svg {
+    color: white;
+    width: clamp(25px, 4vw, 35px);
+    height: clamp(25px, 4vw, 35px);
+}
+
+@media (max-width: 780px) {
+    .content {
+        flex-direction: column;
+        height: auto;
+        gap: clamp(20px, 4vh, 30px);
+    }
+    
+    .form, .redes {
+        width: 100%;
+    }
+
+    .redesLista {
+        flex-direction: row;
+        gap: clamp(10px, 3vw, 20px);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .redes {
+        align-items: center;
+    }
+    
+    .redeItem {
+        justify-content: center;
+        flex-direction: column;
+        width: auto;
+        gap: 8px;
+    }
+    
+    .fundoRede {
+        height: clamp(40px, 10vw, 60px);
+        width: clamp(40px, 10vw, 60px);
+        min-width: clamp(40px, 10vw, 60px);
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    
+    .fundoRede svg {
+        width: clamp(20px, 5vw, 30px);
+        height: clamp(20px, 5vw, 30px);
+    }
+    
+    .redeItem p {
+        font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+        text-align: center;
+        white-space: nowrap;
+    }
+}

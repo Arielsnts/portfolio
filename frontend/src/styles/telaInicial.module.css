@@ -1,0 +1,168 @@
+.telaInicial {
+    position: relative;
+    height: calc(100vh + clamp(40px, 6vw, 70px));
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding-top: clamp(80px, 15vw, 200px);
+    padding-left: clamp(20px, 15vw, 300px);
+
+    background-color: transparent;
+    color: var(--text1);
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+.bgWrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.block {
+    position: absolute;
+    width: 500px;
+    height: 1200px;
+}
+
+.block1 {
+    background: var(--light);
+    top: -100px;
+    left: -550px;
+    transform: rotate(15deg);
+    z-index: 1;
+}
+
+.block2 {
+    background: var(--light);
+    top: -150px;
+    right: -500px;
+    transform: rotate(-20deg);
+    z-index: 1;
+}
+
+.block3 {
+    background: var(--dark);
+    top: 60px;
+    left: -600px;
+    transform: rotate(25deg);
+    z-index: 0;
+}
+
+.block4 {
+    background: var(--dark);
+    top: -40px;
+    right: -550px;
+    transform: rotate(-30deg);
+    z-index: 0;
+}
+
+@media (max-width: 900px) {
+    .block1 {
+        left: -570px;
+    }
+
+    .block3 {
+        left: -620px;
+    }
+    
+    .block2,
+    .block4 {
+        display: none;
+    }
+
+    .telaInicial {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .block1 {
+        left: -594px;
+    }
+
+    .block3 {
+        top: -50px;
+        left: -630px;
+    }
+
+    .block2,
+    .block4 {
+        display: none;
+    }
+}
+
+.article {
+    width: clamp(260px, 60vw, 500px);
+    position: relative;
+    z-index: 3;
+}
+
+.article h1 {
+    color: var(--text1);
+    margin: clamp(6px, 1vw, 10px) 0;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.article h2 {
+    color: var(--text1);
+    font-size: clamp(1rem, 2.3vw, 1.4rem);
+}
+
+.article p {
+    color: var(--text1);
+    margin: clamp(10px, 2vw, 15px) 0;
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    gap: clamp(6px, 1vw, 10px);
+}
+
+.buttonContato,
+.buttonSobre {
+    font-size: clamp(0.9rem, 2.3vw, 1.2rem);
+    font-weight: bold;
+
+    width: clamp(130px, 28vw, 200px);
+    height: clamp(32px, 6vw, 35px);
+
+    border: none;
+    border-radius: clamp(20px, 6vw, 40px);
+
+    transition: box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.buttonContato {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.buttonContato:hover {
+    box-shadow: 0 0 5px var(--button-hover-shadow);
+    cursor: pointer;
+}
+
+.buttonSobre {
+    background-color: var(--bg1);
+    color: var(--text);
+}
+
+.buttonSobre:hover {
+    color: var(--light);
+    cursor: pointer;
+}

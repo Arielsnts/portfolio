@@ -1,0 +1,153 @@
+.sobre {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg2);
+    color: var(--text1);
+    box-sizing: border-box;
+
+    overflow: hidden;
+    scroll-margin-top: 70px;
+}
+
+.bgWrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.block {
+    position: absolute;
+    width: 500px;
+    height: 1200px;
+}
+
+.block1 {
+    background: var(--light);
+    top: -90px;
+    left: -550px;
+    transform: rotate(15deg);
+    z-index: 1;
+}
+
+.block2 {
+    background: var(--dark);
+    top: -20px;
+    left: -350px;
+    transform: rotate(-20deg);
+    z-index: 1;
+}
+
+.content {
+    width: clamp(300px, 80vw, 950px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.imagem {
+    width: clamp(100px, 35vw, 350px);
+    text-align: center;
+}
+
+.imagem img {
+    width: clamp(140px, 22vw, 250px);
+    height: clamp(140px, 22vw, 250px);
+    object-fit: cover;
+
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.imagem h1 {
+    font-size: clamp(18px, 2.2vw, 26px);
+    margin: 5px 0 0;
+    color: white;
+}
+
+.imagem h2 {
+    font-size: clamp(14px, 1.6vw, 18px);
+    opacity: 0.8;
+    margin: 2px 0 0;
+    color: white;
+}
+
+.texto {
+    width: clamp(250px, 40vw, 500px);
+    padding: clamp(15px, 3vw, 30px);
+    background-color: var(--bg1);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 1.5vw, 15px);
+}
+
+.texto h1 {
+    font-size: clamp(20px, 3vw, 28px);
+    margin: 0;
+}
+
+.texto p {
+    line-height: 1.5;
+    opacity: 0.9;
+    font-size: clamp(14px, 1.6vw, 16px);
+}
+
+.texto button {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: bold;
+
+    background-color: var(--button-bg);
+    color: var(--button-text);
+
+    width: clamp(120px, 20vw, 200px);
+    height: clamp(30px, 4vw, 35px);
+
+    border: none;
+    border-radius: 40px;
+
+    transition: all 0.2s ease;
+}
+
+.texto button:hover {
+    box-shadow: 0 0 5px var(--button-hover-shadow);
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .sobre {
+        padding: clamp(10px, 5vw, 15px);
+    }
+
+    .content {
+        flex-direction: column;
+        background-color: var(--bg1);
+        border-radius: 20px;
+        padding: 20px 40px;
+    }
+
+    .imagem h1,
+    .imagem h2 {
+        color: var(--text1);
+    }
+
+    .imagem img {
+        border: 3px solid var(--text1);
+    }
+
+    .texto {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+}

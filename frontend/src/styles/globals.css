@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* VARIAVEIS DOS TEMAS */
+
+:root {
+    /* LIGHT THEME */
+    --principal: #0f5af2;
+    --light: #689aff;
+    --dark: #1644a2;
+
+    --bg1: white;
+    --bg2: #0f5af2;
+
+    --text1: #0f5af2;
+    --text2: white;
+
+    --header-text: #0f5af2;
+    --header-scrolled-bg: #0f5af2;
+    --header-scrolled-shadow: #ffffff60;
+    --header-scrolled-text: #ffffff;
+
+    --footer-bg: #0f5af2;
+    --footer-text: #ffffff;
+
+    --button-bg: #0f5af2;
+    --button-text: #ffffff;
+    --button-hover-shadow: #0f5af2;
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+    --principal: #0f5af2;
+    --light: #689aff;
+    --dark: #1f66f6;
+
+    --bg1: #051f54;
+    --bg2: #072f7d;
+
+    --text1: white;
+    --text2: white;
+
+    --header-text: #ffffff;
+    --header-scrolled-bg: #0a3ea6;
+    --header-scrolled-shadow: rgba(0, 0, 0, 0.5);
+    --header-scrolled-text: #ffffff;
+
+    --footer-bg: #072f7d;
+    --footer-text: #ffffff;
+
+    --button-bg: #1f66f6;
+    --button-text: #ffffff;
+    --button-hover-shadow: #1f66f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg1);
+    color: var(--text1);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 clamp(40px, 15vw, 170px);
+    box-sizing: border-box;
+
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    background-color: var(--header-scrolled-bg);
+    box-shadow: 0 0 10px var(--header-scrolled-shadow);
+}
+
+.titulo {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+header.scrolled .titulo,
+header.scrolled nav a {
+    color: white;
+}
+
+header.scrolled nav a:hover {
+    color: var(--light);
+}
+
+header.scrolled .button-style {
+    background-color: white;
+    color: var(--principal);
+}
+
+header.scrolled .button-style:hover {
+    box-shadow: 0 0 5px white;
+}
+
+header.scrolled .menu-button {
+    color: white;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.header-menu .titulo {
+    color: var(--header-text);
+}
+
+.header-menu nav a {
+    color: var(--header-text);
+}
+
+.header-menu nav a:hover {
+    color: var(--light);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+nav a {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--light);
+    cursor: pointer;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--header-text);
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .login {
+        display: none;
+    }
+}
+
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 9;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 250px;
+
+    background-color: var(--bg2);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+
+    z-index: 10;
+
+    transition: right 0.3s ease;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.close-btn {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.button-menu {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    background-color: white;
+    color: var(--principal);
+
+    width: 200px;
+    height: 35px;
+
+    border: none;
+    border-radius: 40px;
+
+    transition: all 0.2s ease;
+}
+
+.button-menu:hover {
+    box-shadow: 0 0 5px white;
+    cursor: pointer;
+}
+
+.sidebar a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+    color: var(--light);
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+
+    background-color: var(--footer-bg);
+    padding: 0 clamp(15px, 5vw, 50px);
+    color: var(--footer-text);
+
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    gap: clamp(10px, 4vw, 40px);
+}
+
+footer p {
+    font-weight: bold;
+}
+
+footer nav {
+    display: flex;
+    gap: clamp(10px, 3vw, 25px);
+}
+
+footer nav a {
+    color: var(--footer-text);
+    font-size: clamp(0.8rem, 1.4vw, 1rem);
+}
+
+/* BOTÃO */
+
+.button-style {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    background-color: var(--button-bg);
+    color: var(--button-text);
+
+    width: 200px;
+    height: 35px;
+
+    border: none;
+    border-radius: 40px;
+
+    transition: all 0.2s ease;
+}
+
+.button-style:hover {
+    box-shadow: 0 0 5px var(--button-hover-shadow);
+    cursor: pointer;
+}
+
+.theme-switch {
+    width: 40px;
+    height: 18px;
+    border-radius: 50px;
+    background: var(--switch-bg, #ccc);
+    border: none;
+
+    display: flex;
+    align-items: center;
+
+    padding: 3px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.theme-switch .thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.theme-switch.light {
+    background: #bbb;
+}
+
+.theme-switch.light .thumb {
+    transform: translateX(0);
+}
+
+.theme-switch.dark {
+    background: #0f5af2;
+}
+
+.theme-switch.dark .thumb {
+    transform: translateX(21px);
+}
