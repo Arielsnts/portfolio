@@ -11,7 +11,7 @@ dotenv.config()
 const app = express()
 
 app.use(cors({
-  origin: "https://portifolio-puce-nine-15.vercel.app/",
+  origin: "https://portifolio-puce-nine-15.vercel.app",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }))
