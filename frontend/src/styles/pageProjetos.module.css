@@ -5,6 +5,7 @@
     gap: 30px;
 
     padding: 100px;
+    box-sizing: border-box;
 }
 
 .sect h1 {
