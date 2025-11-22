@@ -185,6 +185,10 @@ a:hover {
         display: none;
     }
 
+    .nav-projetos {
+        display: flex;
+    }
+
     .menu-button {
         display: block;
     }

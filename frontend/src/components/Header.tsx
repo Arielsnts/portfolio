@@ -2,8 +2,26 @@
 
 import { useEffect, useState } from "react"
 import ThemeSwitcher from "@/components/ThemeSwitcher"
+import { usePathname } from "next/navigation"
 
 export default function Header() {
+  const pathname = usePathname();
+
+  const isProjetosPage = pathname.startsWith("/projetos");
+
+  if (isProjetosPage) {
+    return (
+      <header className={"header-menu scrolled"}>
+        <a href="/" className="titulo">Ariel Santos</a>
+
+        <nav className="nav-projetos">
+          <ThemeSwitcher />
+          <a href="/">Home</a>
+        </nav>
+      </header>
+    )
+  }
+
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -11,7 +29,7 @@ export default function Header() {
     const onScroll = () => {
       setScrolled(window.scrollY > 0)
     }
-    
+
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
