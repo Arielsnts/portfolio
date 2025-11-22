@@ -1,4 +1,4 @@
-# Portfólio – Ariel Santos
+# Portfólio - Ariel Santos
 
 Repositório do meu portfólio pessoal, criado para apresentar minhas habilidades e projetos como **desenvolvedor full stack**.
 
