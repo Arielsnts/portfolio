@@ -3,7 +3,7 @@
 Repositório do meu portfólio pessoal, criado para apresentar minhas habilidades e projetos como **desenvolvedor full stack**.
 
 ## Acesse:
-> https://portifolio-puce-nine-15.vercel.app/
+> https://ariel-santos.vercel.app
 
 ### **Contato**
 - **Email:** arielsant520@gmail.com  
