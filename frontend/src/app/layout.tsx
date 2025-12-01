@@ -5,7 +5,7 @@ import Footer from "@/components/Footer"
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
-  title: "Portifolio",
+  title: "Portfólio",
   description: "Desenvolvido por Ariel Santos",
 };
 
