@@ -14,7 +14,7 @@ export default function Skills() {
             </div>
 
             <h1>Skills</h1>
-            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, hic. Consectetur veritatis culpa omnis. Sed explicabo soluta quod nam autem</h2>
+            <h2>Possuo experiência com desenvolvimento de aplicações utilizando as seguintes tecnologias:</h2>
 
             <div className={styles.container}>
 

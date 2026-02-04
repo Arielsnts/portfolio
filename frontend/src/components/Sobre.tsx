@@ -26,7 +26,11 @@ export default function Sobre() {
                 </div>
                 <div className={styles.texto}>
                     <h1>Sobre Mim</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque nulla aliquam natus. Rerum, ea autem nobis ullam tenetur voluptatibus quam quibusdam nesciunt reprehenderit aliquid recusandae unde quae soluta, quas iste!</p>
+                    <p>
+                        Meu nome é Ariel Santos, sou estudante de Sistemas de Informação na Universidade Federal de Sergipe. <br />
+                        Tenho interesse na área de programação como forma de resolver problemas organizacionais por meio da tecnologia. <br />
+                        Atualmente, estou focado no desenvolvimento web, buscando aprimorar minhas habilidades tanto no front-end quanto no back-end.
+                    </p>
                     <button onClick={() => scrollToSection("projetos")}>Projetos</button>
                 </div>
             </div>

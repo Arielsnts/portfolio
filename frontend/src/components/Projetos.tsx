@@ -14,7 +14,7 @@ export default function Projetos() {
             <Link href={"/projetos"} className={styles.quadro}>
                 <img src="/projetos.png" alt="projeto" />
                 <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, repellat facere. Rem, cupiditate! Vitae alias fugit nulla</p>
+                    <p>Projetos desenvolvidos para demonstrar minhas habilidades em desenvolvimento web, incluindo aplicações de estudo e projetos acadêmicos realizados na UFS.</p>
                     <button className="button-style">Ver Projetos</button>
                 </div>
             </Link>
