@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "@/styles/telaInicial.module.css"
+import styles from "./telaInicial.module.css"
 
 export default function TelaInicial() {
 

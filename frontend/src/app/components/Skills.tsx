@@ -1,4 +1,4 @@
-import styles from "@/styles/skills.module.css"
+import styles from "./skills.module.css"
 import {
     SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs,
     SiMongodb, SiPostgresql, SiPython

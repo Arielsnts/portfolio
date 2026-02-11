@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "@/styles/sobre.module.css"
+import styles from "./sobre.module.css"
 
 export default function Sobre() {
     const scrollToSection = (id: string) => {

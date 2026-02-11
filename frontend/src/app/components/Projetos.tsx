@@ -1,4 +1,4 @@
-import styles from "@/styles/projetos.module.css"
+import styles from "./projetos.module.css"
 import Link from "next/link"
 
 export default function Projetos() {

@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "@/styles/contato.module.css"
+import styles from "./contato.module.css"
 import { SiGithub, SiLinkedin } from "react-icons/si"
 import { MdEmail } from "react-icons/md"
 import { api } from "@/lib/api"
