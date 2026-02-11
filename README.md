@@ -12,12 +12,8 @@ Repositório do meu portfólio pessoal, criado para apresentar minhas habilidade
 
 ## Tecnologias Utilizadas
 
-### **Front-end**
+### **Front-end e Back-end**
 - Next.js  
-- TypeScript  
-
-### **Back-end**
-- Express  
 - TypeScript  
 
 ### **Banco de Dados**
