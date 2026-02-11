@@ -105,12 +105,12 @@
     }
 
     .block1 {
-        top: 0;
+        top: 20px;
         left: 70vw;
     }
     
     .block2 {
-        bottom: 0;
+        bottom: 20px;
         right: 70vw;
     }
 

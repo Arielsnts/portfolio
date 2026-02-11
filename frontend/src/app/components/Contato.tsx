@@ -3,7 +3,7 @@
 import styles from "./contato.module.css"
 import { SiGithub, SiLinkedin } from "react-icons/si"
 import { MdEmail } from "react-icons/md"
-import { api } from "@/lib/api"
+import { action } from "./action"
 import { useState } from "react"
 
 export default function Contato() {
@@ -12,40 +12,41 @@ export default function Contato() {
   const [msg, setMsg] = useState("")
   const [loading, setLoading] = useState(false)
 
-  async function enviarContato() {
-    if (loading) return
+async function enviarContato() {
+  if (loading) return
 
-    if (!nome.trim() || !email.trim() || !msg.trim()) {
-      alert("Preencha todos os campos antes de enviar.")
+  if (!nome.trim() || !email.trim() || !msg.trim()) {
+    alert("Preencha todos os campos antes de enviar.")
+    return
+  }
+
+  try {
+    setLoading(true)
+
+    const response = await action({
+      nome,
+      email,
+      mensagem: msg
+    })
+
+    if (response?.error) {
+      alert(response.error)
       return
     }
 
-    try {
-      setLoading(true)
-
-      const response = await api.post("/api/contato", {
-        nome,
-        email,
-        mensagem: msg
-      })
-
-      if (response.status === 201) {
-        alert("Mensagem enviada com sucesso!")
-        setNome("")
-        setEmail("")
-        setMsg("")
-      } else {
-        alert("Não foi possível enviar. Tente novamente.")
-      }
-    }
-    catch (e) {
-      console.error(e)
-      alert("Ocorreu um erro ao enviar sua mensagem.")
-    }
-    finally {
-      setLoading(false)
-    }
+    alert("Mensagem enviada com sucesso!")
+    setNome("")
+    setEmail("")
+    setMsg("")
   }
+  catch (e) {
+    console.error(e)
+    alert("Ocorreu um erro ao enviar sua mensagem.")
+  }
+  finally {
+    setLoading(false)
+  }
+}
 
   return (
     <div className={styles.contato} id="contato">
