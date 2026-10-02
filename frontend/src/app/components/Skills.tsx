@@ -1,8 +1,15 @@
 import styles from "./skills.module.css"
 import SkillCard from "@/components/SkillCard"
 import {
-    SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs,
-    SiMongodb, SiPostgresql, SiPython
+    SiHtml5,
+    SiCss3,
+    SiJavascript,
+    SiTypescript,
+    SiReact,
+    SiNextdotjs,
+    SiMongodb,
+    SiPostgresql,
+    SiPython
 } from "react-icons/si"
 import { FaJava } from "react-icons/fa"
 
@@ -14,29 +21,23 @@ export default function Skills() {
                 <div className={`${styles.block} ${styles.block2}`}></div>
             </div>
 
-            <h1>Skills</h1>
-            <h2>Tecnologias com as quais já desenvolvi aplicações.</h2>
+            <div className={styles.content}>
+                <h1>Skills</h1>
+                <p>Tecnologias com as quais já desenvolvi aplicações.</p>
 
-            <div className={styles.container}>
+                <div className={styles.skillsGrid}>
+                    <SkillCard icon={<SiHtml5 />} nome="HTML5" />
+                    <SkillCard icon={<SiCss3 />} nome="CSS3" />
+                    <SkillCard icon={<SiJavascript />} nome="JavaScript" />
+                    <SkillCard icon={<SiTypescript />} nome="TypeScript" />
+                    <SkillCard icon={<SiReact />} nome="React" />
 
-                <SkillCard icon={<SiCss3/>} nome="CSS3" />
-
-                {/* <div className={styles.linha1}>
-                    <div title="HTML" className={styles.box}><SiHtml5 size={60} /></div>
-                    <div title="CSS" className={styles.box}><SiCss3 size={60} /></div>
-                    <div title="JavaScript" className={styles.box}><SiJavascript size={60} /></div>
-                    <div title="TypeScript" className={styles.box}><SiTypescript size={60} /></div>
-                    <div title="React" className={styles.box}><SiReact size={60} /></div>
+                    <SkillCard icon={<SiNextdotjs />} nome="Next.js" />
+                    <SkillCard icon={<SiMongodb />} nome="MongoDB" />
+                    <SkillCard icon={<SiPostgresql />} nome="PostgreSQL" />
+                    <SkillCard icon={<SiPython />} nome="Python" />
+                    <SkillCard icon={<FaJava />} nome="Java" />
                 </div>
-
-                <div className={styles.linha2}>
-                    <div title="Next.js" className={styles.box}><SiNextdotjs size={60} /></div>
-                    <div title="Mongodb" className={styles.box}><SiMongodb size={60} /></div>
-                    <div title="PostgreSQL" className={styles.box}><SiPostgresql size={60} /></div>
-                    <div title="Python" className={styles.box}><SiPython size={60} /></div>
-                    <div title="Java" className={styles.box}><FaJava size={60} /></div>
-                </div> */}
-
             </div>
         </div>
     )

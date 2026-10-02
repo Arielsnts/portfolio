@@ -7,7 +7,7 @@
     border: solid 1px var(--skill-card-trace);
     padding: 20px;
     border-radius: 20px;
-    width: 100%;
+
 }
 
 .quadro {
@@ -23,6 +23,7 @@
 .quadro svg {
     width: 30px;
     height: 30px;
+    color: white;
 }
 
 .nome {
