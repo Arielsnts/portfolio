@@ -78,6 +78,7 @@
     opacity: 0.8;
     margin: 2px 0 0;
     color: white;
+    font-weight: 500;
 }
 
 .texto {
@@ -94,6 +95,7 @@
     font-size: clamp(20px, 3vw, 28px);
     margin: 0;
     color: var(--title-2);
+    font-family: var(--font-title), sans-serif;
 }
 
 .texto p {
@@ -131,7 +133,7 @@
 
     .content {
         flex-direction: column;
-        background-color: var(--bg-1);
+        background-color: transparent;
         border-radius: 20px;
         padding: 20px 40px;
     }
@@ -146,8 +148,7 @@
     }
 
     .texto {
-        text-align: center;
-        align-items: center;
+        margin-top: 30px;
         width: 100%;
         padding: 10px;
     }
