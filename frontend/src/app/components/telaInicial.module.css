@@ -11,7 +11,7 @@
     padding-left: clamp(20px, 15vw, 300px);
 
     background-color: transparent;
-    color: var(--text1);
+    color: var(--text-1);
     box-sizing: border-box;
 
     overflow: hidden;
@@ -31,7 +31,7 @@
 }
 
 .block1 {
-    background: var(--light);
+    background: var(--block-light);
     top: -100px;
     left: -550px;
     transform: rotate(15deg);
@@ -39,7 +39,7 @@
 }
 
 .block2 {
-    background: var(--light);
+    background: var(--block-light);
     top: -150px;
     right: -500px;
     transform: rotate(-20deg);
@@ -47,7 +47,7 @@
 }
 
 .block3 {
-    background: var(--dark);
+    background: var(--block-dark);
     top: 60px;
     left: -600px;
     transform: rotate(25deg);
@@ -55,7 +55,7 @@
 }
 
 .block4 {
-    background: var(--dark);
+    background: var(--block-dark);
     top: -40px;
     right: -550px;
     transform: rotate(-30deg);
@@ -110,18 +110,18 @@
 }
 
 .article h1 {
-    color: var(--text1);
+    color: var(--home-title);
     margin: clamp(6px, 1vw, 10px) 0;
     font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
 .article h2 {
-    color: var(--text1);
+    color: var(--title-1);
     font-size: clamp(1rem, 2.3vw, 1.4rem);
 }
 
 .article p {
-    color: var(--text1);
+    color: var(--subtitle-1);
     margin: clamp(10px, 2vw, 15px) 0;
     font-size: clamp(0.9rem, 2.2vw, 1.1rem);
     line-height: 1.5;
@@ -146,22 +146,26 @@
     transition: box-shadow 0.2s ease, color 0.2s ease;
 }
 
+.buttonSobre {
+    border: solid var(--trace-button) 2px;
+}
+
 .buttonContato {
-    background-color: var(--button-bg);
-    color: var(--button-text);
+    background-color: var(--blue-button-bg);
+    color: var(--blue-button-text);
 }
 
 .buttonContato:hover {
-    box-shadow: 0 0 5px var(--button-hover-shadow);
+    box-shadow: 0 0 5px var(--blue-button-hover-shadow);
     cursor: pointer;
 }
 
 .buttonSobre {
-    background-color: var(--bg1);
-    color: var(--text);
+    background-color: var(--trace-button-bg);
+    color: var(--trace-button-text);
 }
 
 .buttonSobre:hover {
-    color: var(--light);
+    color: var(--trace-button-text);
     cursor: pointer;
 }

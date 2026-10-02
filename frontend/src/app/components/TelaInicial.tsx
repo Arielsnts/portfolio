@@ -24,7 +24,7 @@ export default function TelaInicial() {
             <article className={styles.article}>
                 <h1>Ariel Santos</h1>
                 <h2>Desenvolvedor Full-Stack</h2>
-                <p>Desenvolvedor web focado em criar aplicações modernas, funcionais e bem estruturadas, utilizando tecnologias atuais</p>
+                <p>Desenvolvo aplicações web modernas, funcionais e bem estruturadas, com tecnologias atuais.</p>
 
                 <div className={styles.buttons}>
                     <button

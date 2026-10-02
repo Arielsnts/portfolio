@@ -7,8 +7,8 @@
     justify-content: center;
     align-items: center;
 
-    background-color: var(--bg2);
-    color: var(--text1);
+    background-color: var(--bg-2);
+    color: var(--text-1);
     box-sizing: border-box;
 
     overflow: hidden;
@@ -29,7 +29,7 @@
 }
 
 .block1 {
-    background: var(--light);
+    background: var(--block-light);
     top: -90px;
     left: -550px;
     transform: rotate(15deg);
@@ -37,7 +37,7 @@
 }
 
 .block2 {
-    background: var(--dark);
+    background: var(--block-dark);
     top: -20px;
     left: -350px;
     transform: rotate(-20deg);
@@ -83,7 +83,6 @@
 .texto {
     width: clamp(250px, 40vw, 500px);
     padding: clamp(15px, 3vw, 30px);
-    background-color: var(--bg1);
     border-radius: 10px;
 
     display: flex;
@@ -94,20 +93,22 @@
 .texto h1 {
     font-size: clamp(20px, 3vw, 28px);
     margin: 0;
+    color: var(--title-2);
 }
 
 .texto p {
     line-height: 1.5;
     opacity: 0.9;
     font-size: clamp(14px, 1.6vw, 16px);
+    color: var(--text-2);
 }
 
 .texto button {
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     font-weight: bold;
 
-    background-color: var(--button-bg);
-    color: var(--button-text);
+    background-color: var(--white-button-bg);
+    color: var(--white-button-text);
 
     width: clamp(120px, 20vw, 200px);
     height: clamp(30px, 4vw, 35px);
@@ -119,7 +120,7 @@
 }
 
 .texto button:hover {
-    box-shadow: 0 0 5px var(--button-hover-shadow);
+    box-shadow: 0 0 5px var(--white-button-hover-shadow);
     cursor: pointer;
 }
 
@@ -130,18 +131,18 @@
 
     .content {
         flex-direction: column;
-        background-color: var(--bg1);
+        background-color: var(--bg-1);
         border-radius: 20px;
         padding: 20px 40px;
     }
 
     .imagem h1,
     .imagem h2 {
-        color: var(--text1);
+        color: var(--text-1);
     }
 
     .imagem img {
-        border: 3px solid var(--text1);
+        border: 3px solid var(--text-1);
     }
 
     .texto {

@@ -12,7 +12,7 @@
 }
 
 .block1 {
-    background: var(--light);
+    background: var(--block-light);
     top: -700px;
     left: 0px;
     transform: rotate(60deg);
@@ -20,7 +20,7 @@
 }
 
 .block2 {
-    background: var(--dark);
+    background: var(--block-dark);
     bottom: -700px;
     right: 0px;
     transform: rotate(60deg);
@@ -36,8 +36,8 @@
     justify-content: center;
     align-items: center;
 
-    background-color: var(--bg1);
-    color: var(--text1);
+    background-color: var(--bg-1);
+    color: var(--text-1);
     box-sizing: border-box;
     overflow: hidden;
     scroll-margin-top: clamp(60px, 8vh, 70px);
@@ -50,7 +50,7 @@
 
     width: clamp(220px, 77vw, 570px);
 
-    background-color: var(--bg2);
+    background-color: var(--bg-2);
     color: white;
     border-radius: clamp(15px, 3vw, 20px);
     padding: clamp(15px, 3vw, 30px);
@@ -72,8 +72,8 @@
 
 .form input {
     padding: clamp(6px, 1.2vh, 8px) clamp(8px, 1.5vw, 10px);
-    background: var(--bg1);
-    color: var(--text1);
+    background: var(--bg-1);
+    color: var(--text-1);
     border: none;
     border-radius: clamp(6px, 1vw, 8px);
     outline: none;
@@ -90,8 +90,8 @@
     height: clamp(4rem, 8vh, 6rem);
     padding: clamp(6px, 1.2vh, 8px) clamp(8px, 1.5vw, 10px);
 
-    background: var(--bg1);
-    color: var(--text1);
+    background: var(--bg-1);
+    color: var(--text-1);
 
     border: 1px solid var(--principal);
     border-radius: clamp(6px, 1vw, 8px);
@@ -115,8 +115,8 @@
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-weight: bold;
 
-    background-color: var(--bg1);
-    color: var(--text1);
+    background-color: var(--bg-1);
+    color: var(--text-1);
 
     width: 100%;
     height: clamp(30px, 5vh, 35px);

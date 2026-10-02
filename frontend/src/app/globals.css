@@ -1,55 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* VARIAVEIS DOS TEMAS */
-
 :root {
-    /* LIGHT THEME */
-    --principal: #0f5af2;
-    --light: #689aff;
-    --dark: #1644a2;
+    /* MODO CLARO - Base */
+    --bg-1: #FFFFFF;
+    --bg-2: #1058F5;
 
-    --bg1: white;
-    --bg2: #0f5af2;
+    --title-1: #0D1B3D;
+    --subtitle-1: #4A5876;
+    --text-1: #4A5876;
 
-    --text1: #0f5af2;
-    --text2: white;
+    --title-2: #FFFFFF;
+    --subtitle-2: #FFFFFF;
+    --text-2: #FFFFFF;
 
-    --header-text: #0f5af2;
-    --header-scrolled-bg: #0f5af2;
-    --header-scrolled-shadow: #ffffff60;
-    --header-scrolled-text: #ffffff;
+    --blue-light: #6C9BFF;
+    --blue-medium: #1058F5;
+    --blue-dark: #16459E;
 
-    --footer-bg: #0f5af2;
-    --footer-text: #ffffff;
 
-    --button-bg: #0f5af2;
-    --button-text: #ffffff;
-    --button-hover-shadow: #0f5af2;
+    /* header */
+    --header-text: var(--blue-medium);
+    --header-scrolled-bg: var(--bg-2);
+    --header-scrolled-shadow: rgba(255, 255, 255, 0.38);
+    --header-scrolled-text: var(--text-2);
+
+    /* footer */
+    --footer-bg: var(--bg-2);
+    --footer-text: var(--text-2);
+
+    /* botão azul */
+    --blue-button-bg: var(--blue-medium);
+    --blue-button-text: var(--text-2);
+    --blue-button-hover-shadow: var(--blue-medium);
+
+    /* botão transparente */
+    --trace-button-bg: transparent;
+    --trace-button-text: var(--blue-medium);
+    --trace-button-hover-shadow: var(--blue-medium);
+    --trace-button: var(--blue-medium);
+
+    /* botão branco */
+    --white-button-bg: #FFFFFF;
+    --white-button-text: var(--blue-medium);
+    --white-button-hover-shadow: var(--blue-medium);
+
+    /* bloco claro */
+    --block-light: var(--blue-light);
+
+    /* bloco escuro */
+    --block-dark: var(--blue-dark);
+
+    /* home title */
+    --home-title: var(--blue-medium)
 }
 
-/* DARK THEME */
+/* MODO ESCURO */
 [data-theme="dark"] {
-    --principal: #0f5af2;
-    --light: #689aff;
-    --dark: #1f66f6;
+    /* MODO ESCURO - Base */
+    --bg-1: #0a1020;
+    --bg-2: #0f2a66;
 
-    --bg1: #051f54;
-    --bg2: #072f7d;
+    --title-1: #FFFFFF;
+    --subtitle-1: #a3b0cc;
+    --text-1: #FFFFFF;
 
-    --text1: white;
-    --text2: white;
+    --title-2: #FFFFFF;
+    --subtitle-2: #FFFFFF;
+    --text-2: #FFFFFF;
 
-    --header-text: #ffffff;
-    --header-scrolled-bg: #0a3ea6;
+    --blue-light: #5b9bff;
+    --blue-medium: #1f4fb8;
+    --blue-dark: #0f2a66;
+
+    /* header */
+    --header-text: var(--text-1);
+    --header-scrolled-bg: var(--bg-2);
     --header-scrolled-shadow: rgba(0, 0, 0, 0.5);
-    --header-scrolled-text: #ffffff;
+    --header-scrolled-text: var(--text-2);
 
-    --footer-bg: #072f7d;
-    --footer-text: #ffffff;
+    /* footer */
+    --footer-bg: var(--bg-2);
+    --footer-text: var(--text-2);
 
-    --button-bg: #1f66f6;
-    --button-text: #ffffff;
-    --button-hover-shadow: #1f66f6;
+    /* botão azul */
+    --blue-button-bg: var(--blue-light);
+    --blue-button-text: var(--text-2);
+    --blue-button-hover-shadow: var(--blue-light);
+
+    /* botão transparente */
+    --trace-button-bg: transparent;
+    --trace-button-text: var(--blue-light);
+    --trace-button-hover-shadow: var(--blue-light);
+    --trace-button: var(--blue-light);
+
+    /* bloco claro */
+    --block-light: var(--blue-light);
+
+    /* bloco escuro */
+    --block-dark: var(--blue-medium);
+
+    /* home title */
+    --home-title: var(--blue-light)
+    
 }
 
 * {
@@ -65,8 +118,8 @@ html {
 }
 
 body {
-    background-color: var(--bg1);
-    color: var(--text1);
+    background-color: var(--bg-1);
+    color: var(--text-1);
 
     display: flex;
     flex-direction: column;
@@ -104,7 +157,7 @@ header.scrolled {
 
 .titulo {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
-    color: var(--primary);
+    color: var(--principal);
     transition: color 0.3s ease;
 }
 
@@ -225,7 +278,7 @@ a:hover {
     height: 100vh;
     width: 250px;
 
-    background-color: var(--bg2);
+    background-color: var(--bg-2);
     color: white;
 
     display: flex;
@@ -334,8 +387,8 @@ footer nav a {
     font-size: 1.2rem;
     font-weight: bold;
 
-    background-color: var(--button-bg);
-    color: var(--button-text);
+    background-color: var(--blue-button-bg);
+    color: var(--blue-button-text);
 
     width: 200px;
     height: 35px;
@@ -347,7 +400,7 @@ footer nav a {
 }
 
 .button-style:hover {
-    box-shadow: 0 0 5px var(--button-hover-shadow);
+    box-shadow: 0 0 5px var(--blue-button-hover-shadow);
     cursor: pointer;
 }
 

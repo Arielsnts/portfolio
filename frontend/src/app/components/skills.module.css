@@ -12,7 +12,7 @@
 }
 
 .block1 {
-    background: var(--light);
+    background: var(--block-light);
     bottom: -650px;
     right: 0px;
     transform: rotate(65deg);
@@ -20,7 +20,7 @@
 }
 
 .block2 {
-    background: var(--dark);
+    background: var(--block-dark);
     bottom: -640px;
     right: 110px;
     transform: rotate(75deg);
@@ -38,8 +38,8 @@
     align-items: center;
     flex-direction: column;
 
-    background-color: var(--bg1);
-    color: var(--text1);
+    background-color: var(--bg-1);
+    color: var(--text-1);
     box-sizing: border-box;
     text-align: center;
 
@@ -98,7 +98,7 @@
 
 .box:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px var(--text1);
+    box-shadow: 0 0 10px var(--text-1);
     cursor: pointer;
 }
 
