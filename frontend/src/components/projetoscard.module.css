@@ -1,0 +1,192 @@
+.card {
+    width: 750px;
+    height: 270px;
+    box-sizing: border-box;
+
+    background: var(--projetos-card-bg);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+    box-shadow: var(--projetos-card-glow);
+    border: 1px solid var(--projetos-card-glow);
+
+    font-family: var(--font-text), sans-serif;
+}
+
+
+.glow {
+    position: absolute;
+    inset: -10px;
+
+    background: radial-gradient(circle at 50% 0%,
+            var(--projetos-card-glow) 0%,
+            var(--bg-1) 70%);
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.image {
+    width: 250px;
+    height: 180px;
+
+    position: relative;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    transition: transform 0.5s ease;
+}
+
+.image img {
+    object-fit: contain;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.25em;
+}
+
+.title {
+    color: var(--title-1);
+
+    font-size: 1.1em;
+    font-weight: 700;
+    font-family: var(--font-title), sans-serif;
+    font-size: 2rem;
+
+    margin: 0;
+
+    transition: all 0.3s ease;
+}
+
+.description {
+    color: var(--text-1);
+
+    font-size: 1rem;
+    font-weight: 300;
+
+    margin: 10px 0;
+
+    opacity: 0.7;
+
+    transition: all 0.3s ease;
+}
+
+.button {
+    background: var(--blue-button-bg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: clamp(0.9rem, 2.3vw, 1.2rem);
+    font-weight: bold;
+
+    width: clamp(130px, 28vw, 200px);
+    height: clamp(32px, 6vw, 35px);
+
+    border: none;
+    border-radius: clamp(20px, 6vw, 40px);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    border-color: var(--projetos-card-glow);
+
+    cursor: pointer;
+}
+
+
+.card:hover .glow {
+    opacity: 1;
+}
+
+.card:hover .image {
+    transform: translateY(-5px) scale(1.03);
+}
+
+.card:hover .title {
+    transform: translateX(2px);
+}
+
+.card:hover .text {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
+.card:hover .button {
+    transform: scale(1);
+}
+
+/* =========================
+   ACTIVE
+========================= */
+
+.card:active {
+    transform: translateY(-5px) scale(0.98);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes shine {
+    0% {
+        background-position: -100% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

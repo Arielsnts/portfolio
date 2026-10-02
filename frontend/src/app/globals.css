@@ -57,6 +57,10 @@
 
     /* traço do skill card */
     --skill-card-trace: #D2D2D4;
+
+    /* projetos card */
+    --projetos-card-bg: #FFF;
+    --projetos-card-glow: #1058f556;
 }
 
 /* MODO ESCURO */
@@ -109,6 +113,10 @@
 
     /* traço do skill card */
     --skill-card-trace: var(--blue-medium);
+
+    /* projetos card */
+    --projetos-card-bg: var(--bg-1);
+    --projetos-card-glow: #1f4fb879;
 }
 
 * {
