@@ -1,4 +1,5 @@
 import styles from "./skills.module.css"
+import SkillCard from "@/components/SkillCard"
 import {
     SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs,
     SiMongodb, SiPostgresql, SiPython
@@ -14,11 +15,13 @@ export default function Skills() {
             </div>
 
             <h1>Skills</h1>
-            <h2>Possuo experiência com desenvolvimento de aplicações utilizando as seguintes tecnologias:</h2>
+            <h2>Tecnologias com as quais já desenvolvi aplicações.</h2>
 
             <div className={styles.container}>
 
-                <div className={styles.linha1}>
+                <SkillCard icon={<SiCss3/>} nome="CSS3" />
+
+                {/* <div className={styles.linha1}>
                     <div title="HTML" className={styles.box}><SiHtml5 size={60} /></div>
                     <div title="CSS" className={styles.box}><SiCss3 size={60} /></div>
                     <div title="JavaScript" className={styles.box}><SiJavascript size={60} /></div>
@@ -32,7 +35,7 @@ export default function Skills() {
                     <div title="PostgreSQL" className={styles.box}><SiPostgresql size={60} /></div>
                     <div title="Python" className={styles.box}><SiPython size={60} /></div>
                     <div title="Java" className={styles.box}><FaJava size={60} /></div>
-                </div>
+                </div> */}
 
             </div>
         </div>
