@@ -70,7 +70,7 @@
     .block3 {
         left: -620px;
     }
-    
+
     .block2,
     .block4 {
         display: none;
@@ -141,11 +141,13 @@
     border: none;
     border-radius: clamp(20px, 6vw, 40px);
 
-    transition: box-shadow 0.2s ease, color 0.2s ease;
+    transition: all 0.2s ease, color 0.2s ease;
 }
 
 .buttonSobre {
     border: solid var(--trace-button) 2px;
+    background-color: var(--trace-button-bg);
+    color: var(--trace-button-text);
 }
 
 .buttonContato {
@@ -154,16 +156,15 @@
 }
 
 .buttonContato:hover {
-    box-shadow: 0 0 5px var(--blue-button-hover-shadow);
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     cursor: pointer;
 }
 
-.buttonSobre {
-    background-color: var(--trace-button-bg);
-    color: var(--trace-button-text);
-}
-
 .buttonSobre:hover {
-    color: var(--trace-button-text);
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     cursor: pointer;
 }

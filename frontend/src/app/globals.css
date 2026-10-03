@@ -196,7 +196,7 @@ header.scrolled nav a {
 }
 
 header.scrolled nav a:hover {
-    color: var(--light);
+    color: var(--blue-light);
 }
 
 header.scrolled .button-style {
@@ -228,7 +228,7 @@ header.scrolled .menu-button {
 }
 
 .header-menu nav a:hover {
-    color: var(--light);
+    color: var(--blue-light);
 }
 
 nav {

@@ -29,16 +29,16 @@ export default function TelaInicial() {
                 <div className={styles.buttons}>
                     <button
                         className={styles.buttonContato}
-                        onClick={() => scrollToSection("contato")}
+                        onClick={() => scrollToSection("projetos")}
                     >
-                        Contato
+                        Ver Projetos
                     </button>
 
                     <button
                         className={styles.buttonSobre}
                         onClick={() => scrollToSection("sobre")}
                     >
-                        Sobre
+                        Sobre Mim
                     </button>
                 </div>
             </article>

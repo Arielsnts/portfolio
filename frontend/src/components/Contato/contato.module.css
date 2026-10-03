@@ -81,6 +81,7 @@
     width: 90%;
     border: 1px solid var(--principal);
     font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: all ease 0.4s;
 }
 
 .form input:focus {
@@ -117,7 +118,7 @@
     font-weight: bold;
 
     background-color: var(--bg-1);
-    color: var(--text-1);
+    color: var(--title-1);
 
     width: 100%;
     height: clamp(30px, 5vh, 35px);
@@ -129,7 +130,9 @@
 }
 
 .form button:hover {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.269);
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     cursor: pointer;
 }
 
@@ -166,7 +169,6 @@
 
 .redeItem:hover {
     transform: translateY(-5px);
-    color: var(--light);
     cursor: pointer;
 }
 
