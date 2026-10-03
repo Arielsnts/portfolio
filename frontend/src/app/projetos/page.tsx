@@ -33,14 +33,18 @@ export default async function Page() {
                   className={styles.projeto}
                   key={projeto.id}
                >
+                  <div className={styles.glow} />
+
                   <img src={projeto.img} alt={projeto.nome} />
+
                   <h2>{projeto.nome}</h2>
+
                   <div className={styles.tags}>
                      {projeto.tags.map((tag, index) => (
                         <p key={index}>{tag}</p>
                      ))}
                   </div>
-                  
+
                   <div className={styles.divButton}>
                      <div className={styles.button}>
                         <FaArrowRight />
