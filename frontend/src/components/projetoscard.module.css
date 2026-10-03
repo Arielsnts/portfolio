@@ -190,3 +190,77 @@
         transform: scale(1);
     }
 }
+
+@media (max-width: 900px) {
+    .card {
+        width: 610px;
+        height: 200px;
+    }
+
+    .content {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .image {
+        width: 180px;
+        height: 140px;
+    }
+
+    .title {
+        font-size: 1.7rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        margin: 6px 0;
+    }
+
+    .button {
+        width: 140px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .card {
+        width: 400px;
+        height: 400px;
+    }
+
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .image {
+        width: 220px;
+        height: 160px;
+    }
+
+    .text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        margin: 5px 0;
+        max-width: 500px;
+    }
+
+    .button {
+        width: 140px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+}
