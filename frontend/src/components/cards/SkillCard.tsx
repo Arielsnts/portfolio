@@ -9,6 +9,8 @@ type Props = {
 export default function SkillCard({ icon, nome }: Props) {
   return (
     <div className={styles.container}>
+      <div className={styles.glow} />
+
       <div className={styles.quadro}>
         {icon}
       </div>
