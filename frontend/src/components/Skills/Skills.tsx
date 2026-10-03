@@ -1,5 +1,5 @@
 import styles from "./skills.module.css"
-import SkillCard from "@/components/SkillCard"
+import SkillCard from "@/components/cards/SkillCard"
 import {
     SiHtml5,
     SiCss3,

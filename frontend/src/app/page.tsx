@@ -1,8 +1,8 @@
-import TelaInicial from "@/app/components/TelaInicial"
-import Sobre from "@/app/components/Sobre"
-import Skills from "@/app/components/Skills"
-import Projetos from "@/app/components/Projetos"
-import Contato from "@/app/components/Contato"
+import TelaInicial from "@/components/TelaInicial/TelaInicial"
+import Sobre from "@/components/Sobre/Sobre"
+import Skills from "@/components/Skills/Skills"
+import Projetos from "@/components/Projetos/Projetos"
+import Contato from "@/components/Contato/Contato"
 
 export default function Home() {
   return (

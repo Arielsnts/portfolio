@@ -1,6 +1,6 @@
 import styles from "./projetos.module.css"
 import Link from "next/link"
-import ProjetosCard from "@/components/ProjetosCard"
+import ProjetosCard from "@/components/cards/ProjetosCard"
 
 export default function Projetos() {
     return (

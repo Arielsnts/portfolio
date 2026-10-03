@@ -3,7 +3,7 @@
 import styles from "./contato.module.css"
 import { SiGithub, SiLinkedin } from "react-icons/si"
 import { FaInstagram } from "react-icons/fa6";
-import { action } from "./action"
+import { action } from "@/components/Contato/action"
 import { useState } from "react"
 
 export default function Contato() {
