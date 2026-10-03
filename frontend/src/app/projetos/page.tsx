@@ -1,5 +1,6 @@
 import prisma from "@/lib/prisma"
 import styles from "./pageProjetos.module.css"
+import { FaArrowRight } from "react-icons/fa";
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
@@ -34,10 +35,16 @@ export default async function Page() {
                >
                   <img src={projeto.img} alt={projeto.nome} />
                   <h2>{projeto.nome}</h2>
-                  <div>
+                  <div className={styles.tags}>
                      {projeto.tags.map((tag, index) => (
                         <p key={index}>{tag}</p>
                      ))}
+                  </div>
+                  
+                  <div className={styles.divButton}>
+                     <div className={styles.button}>
+                        <FaArrowRight />
+                     </div>
                   </div>
                </a>
             ))}

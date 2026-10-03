@@ -61,6 +61,12 @@
     /* projetos card */
     --projetos-card-bg: #FFF;
     --projetos-card-glow: #1058f556;
+
+    /* projetos page */
+    --projetos-bg: var(--blue-medium);
+    --projetos-button-bg: white;
+    --projetos-text: #0D1B3D;
+    --projetos-tag-bg: var(--blue-medium)
 }
 
 /* MODO ESCURO */
@@ -117,6 +123,12 @@
     /* projetos card */
     --projetos-card-bg: var(--bg-1);
     --projetos-card-glow: #1f4fb879;
+
+    /* projetos page */
+    --projetos-bg: var(--bg-1);
+    --projetos-button-bg: var(--blue-dark);
+    --projetos-text: white;
+    --projetos-tag-bg: var(--blue-medium)
 }
 
 * {
